@@ -15,13 +15,16 @@ let minorsDiscount = 80 / 100;
 // calcolare lo sconto anziani
 let eldersDiscount = 60 / 100;
 
-// creare un pulsante che aggiorni nome, Km, età
+// creare un pulsante che renda visibile il biglietto, aggiorni nome, Km, età, generi carrozza, codice CP
+const ticket = document.querySelector(".ticket");
 
 const myButton = document.querySelector("#my-button");
 
  myButton.addEventListener("click",
     function(){
-
+        // biglietto visibile
+        ticket.classList.add("d-block");
+        
         // input nome
         let inputName = userName.value;
 

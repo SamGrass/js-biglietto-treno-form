@@ -92,7 +92,12 @@ button {
 }
 
 /* regole biglietto */
-
+.ticket {
+    display: none;
+}
+.d-block {
+    display: block;
+}
 .col-sx {
     background-color: #bcbcbc92;
 }
