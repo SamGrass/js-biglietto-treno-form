@@ -25,9 +25,12 @@ const myButton = document.querySelector("#my-button");
         // input nome
         let inputName = userName.value;
 
+        document.getElementById("userName").innerHTML = inputName;
+
         // input Km con prezzo biglietto in base ai km (0.21 € al km)
         let inputKm = parseFloat(userKm.value);
         let pricePerKm = inputKm * 0.21;
+        let totalPrice = pricePerKm;
 
         // input età
         let inputAge = userAge.value;
@@ -51,5 +54,14 @@ const myButton = document.querySelector("#my-button");
         console.log(visiblePrice);
 
         document.getElementById("totalPrice").innerHTML = visiblePrice + "€";
+
+        // genera numero random da 1 a 8 per wagon
+        let wagon = Math.floor(Math.random()* 8) + 1;
+
+        document.getElementById("wagon").innerHTML = wagon;
+        // genera numero casuale con 5 unità per CP
+        let CPCode = Math.floor(Math.random()* (99999 - 10000 + 1)) + 10000;
+
+        document.getElementById("CPCode").innerHTML = CPCode;
      }
  );
