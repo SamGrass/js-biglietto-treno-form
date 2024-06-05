@@ -49,10 +49,7 @@ const myButton = document.querySelector("#my-button");
         let visiblePrice = totalPrice.toFixed(2);
 
         console.log(visiblePrice);
+
+        document.getElementById("totalPrice").innerHTML = visiblePrice + "€";
      }
  );
-
-
-
-
-// rendere il risultato 2 digit decimali per 

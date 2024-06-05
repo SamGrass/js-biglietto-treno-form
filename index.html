@@ -4,34 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- tabella nome -->
-    <div>
-        <label for="text">Nome Cognome</label>
-        <input id="nome-cognome" type="text">
-    </div>
+    <main>
+        <div class="container">
 
-    <!-- tabella Km -->
-    <div>
-        <label for="number">Km da percorrere</label>
-        <input id="Kilometri" type="number">
-    </div>
+            <h2 class="txt-center py-1">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+            <div class="card round-card">
+                <!-- tabella nome -->
+                <div class="row mb-1">
+                    <div class="flex-column">
+                        <label for="text">Nome Cognome</label>
+                        <input id="nome-cognome" type="text">
+                    </div>
 
-    <!-- tabella età -->
-    <div>
-        <label for="select">Fascia d'età</label>
-        <select name="età" id="selezione-età">
-            <option value="start" selected>--Seleziona età--</option>
-            <option value="minor">Minorenne</option>
-            <option value="adult">Maggiorenne</option>
-            <option value="elder">Over 64</option>
-        </select>
-    </div>
+                    <!-- tabella Km -->
+                    <div class="flex-column">
+                        <label for="number">Km da percorrere</label>
+                        <input id="Kilometri" type="number">
+                    </div>
 
-    <button id="my-button">Genera</button>
+                    <!-- tabella età -->
+                    <div class="flex-column">
+                        <label for="select">Fascia d'età</label>
+                        <select name="età" id="selezione-età">
+                            <option value="start" selected>--Seleziona età--</option>
+                            <option value="minor">Minorenne</option>
+                            <option value="adult">Maggiorenne</option>
+                            <option value="elder">Over 64</option>
+                        </select>
+                    </div>
+                </div>
 
+                <!-- pulsante genera -->
+                <button class="txt-center" id="my-button">Genera</button>
+
+            </div>
+                
+
+            <!-- biglietto generato -->
+            <div class="d-none">
+                <h2 class="txt-center py-1">IL TUO BIGLIETTO</h2>
+                <div class="card">
+                    <h3>DETTAGLI PASSEGGERI</h3>
+                    <div class="row">
+
+                        <div class="col-sx">
+
+                        </div>
+
+                        <div class="col-dx">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Offerta</th>
+                                        <th>Carrozza</th>
+                                        <th>Codice CP</th>
+                                        <th>Costo biglietto</th>
+                                    </tr>
+                                </thead>                 
+                                <tbody>
+                                    <tr>
+                                        <td>Biglietto standard</td>
+                                        <td id="wagon"></td>
+                                        <td id="CPCode"></td>
+                                        <td id="totalPrice"></td>
+                                    </tr>
+                                </tbody>      
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    
     <!-- link js -->
     <script type="text/javascript" src="js/myscript.js"></script>
 </body>
